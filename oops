@@ -1,0 +1,27 @@
+Q. IS C++ a pure OOPS?
+-> NO,because it uses primitive data type.
+
+**OOPS->  Uses default data type.
+OOPS is defined by 2 types:-
+1.Class.
+2.Objects.
+
+Differenece between Class & Objects
+
+                 CLASS                                             OBJECTS
+   -> Blueprint/template of an object.               -> Instace(represent) of a class.
+   -> Logical Entity.                                -> Physical entity.
+   -> No space/Memory allocated.                     -> Space/Memory allocated.
+   -> No physical existence.                         -> ***When an object is created only that time memory will be allocated.
+
+
+**TYPES OF MEMORY:-
+                STATIC/STACK                                                           HEAP/DYNAMIC
+  -> Compile-time memory allocation-when depend on compiler                -> Runtime memory allocation-when depends on user.
+  -> Less memory/space.                                                    -> More memory/space.
+  -> Example:-                                                             -> Example:-
+           int a;                                                                     int *a = new int;  new keyword is a keyword that 
+                                                                                      gives you the address of that memory.
+
+** SEGMENTATION FAULT:-
+  ->  Point to which memory address that does not exist anymore.
