@@ -1,0 +1,137 @@
+**Default Function: They are of two types:-
+1.CONSTRUCTOR-> It does not need any datatype & does not return any value.
+             -> It is automatically called/invoked once into a program.
+             ->***when an object is created constructor is automatically called.//1 constructor for 1 object.
+             -> 3 types of Constructor:-
+                  -> Default constructor: does not have any parameter.
+                  -> Parameterised Constructor: have atleast 1 parameter.
+                  -> Copy Constructor : Object as a parameter.
+
+2.DESTRUCTOR-> It is the last function which is invoked/automatically called when an object is destroyed/delete.
+
+***Default Function has same as class name.
+
+                                        ***DEFAULT CONSTRUCTOR IN CPP CODE:
+
+
+#include <iostream>
+using namespace std;
+
+class Student{
+public:
+    string name;
+    int roll_no;
+    int age;
+//default constructor
+
+    void study(){
+        cout<<"default constructor called"<<endl;
+    }
+};
+
+int main(){
+    Student obj;
+    //dot operator: access methods and properties of a class
+    obj.name ="Naman";
+    obj.age  =22;
+    obj.study();
+}
+
+
+                                                            ***PARAMETERISED CONSTRUCTOR IN CPP
+
+
+#include <iostream>
+using namespace std;
+
+class Student{
+public:
+    string name;
+    int roll_no;
+    int age;
+// parameterised constructor
+
+Student(int a ){
+    age=a;
+    cout<<age<<endl;
+}
+};
+
+int main(){
+    Student obj(22);
+    //dot operator: access methods and properties of a class
+    obj.name ="Naman";
+    obj.age  =22;
+   return 0;
+}
+
+
+**CONSTRUCTOR OVERLOADING:-
+-> It is a concept that consist of more than one constructor in a program but difference in their parameters.
+
+                                    **THIS-POINTER -> (*this)
+
+1."THIS" is a keyword.
+2."THIS" is a pointer that stores the current address of an object.
+
+
+**WHY WE USE??
+-> When local data member name and original data member name is same.
+
+REPRESENTATION:- (*this).name="NAMAN";
+                OR this -> name;
+
+                                                          **COPY CONSTRUCTOR IN CPP:-
+
+#include<iostream>
+using namespace std;
+
+class student
+{
+    public:
+    string name;
+    int age;
+    int roll_no;
+
+    student(string name,int age,int roll_no){
+        this->name=name;
+        this->age=age;
+        this->roll_no=roll_no;
+        cout<<"copy constructor called"<<endl;
+    }
+    student(student &a){
+    name = a.name;
+    age = a.age;
+    roll_no = a.roll_no;
+    cout<<a.name<<endl<<a.age<<endl<<a.roll_no<<endl;
+    }
+//if &(ampersent) is in actual paramter then it will be address of operator. 
+//if &(ampersent) is in formal parameter then it will be in call by reference.
+};
+
+int main(){
+    student obj1("NAMAN",22,1072);
+    student obj2(obj1);
+}
+
+***MEMBER FUNCTION:- It is used to access private data member.
+
+                                                    **DESTRUCTOR IN CPP:-
+#include <iostream>
+using namespace std;
+
+class student{
+    public:
+    int * age;
+    student(int a){
+        age = new int;
+        *age = a;
+    }
+    ~student(){
+        cout<<"destructor is called"<<endl;
+    }
+};
+
+int main(){
+    student obj(25);
+}
