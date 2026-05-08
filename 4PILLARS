@@ -1,0 +1,88 @@
+**4 PILLARS OF OOPS.......
+
+1.ENCAPSULATION:-> Wrapping up of data into a single unit.
+   Example- Class.
+
+2.ABSTRACTION:-> Only visible importatnt information and hide their implementation.
+   Example- Access Modifier.
+
+3.POLYMORPHISM:-> When one person has many forms.
+   Example- '+'Operator.
+
+           COMPILE TIME                       RUN TIME
+   -> Function overloading          -> Virtual function
+   -> Operator Overloading       
+
+4.INHERITANCE:-> When wild class inherit properties from their parent class.
+
+->Single Inheritance:1 Parent & 1 Child.
+->Multilevel: Grandfather->Father->Child.
+->Multiple: Multi parent & 1 child.
+->Heirarchical: 1 parent & multiple child.
+->Hybrid: Combination of any 2 or 3 inheritance.
+
+                                                ***ABSTRACTION AND ENCAPSULATION CODE IN CPP:-
+
+#include <iostream>
+using namespace std;
+//ABSTRACTION & ENCAPSULATION
+
+class student{
+    private:
+    //properties
+    string name;
+    int age;
+    int roll_no;
+
+    public:
+    void setter(string n,int a,int r )
+    {
+        name = n;
+        age = a;
+        roll_no = r;
+    }
+    int getter()
+    {
+        return age;
+    }
+};
+
+int main(){
+    student obj;
+    obj.setter("NAMAN",22,1072);
+    cout<<obj.getter();
+}
+
+                                                    **POLYMORPHISM IN CPP:-
+
+***FUNCTION OVERLOADING:-
+
+#include<iostream>
+using namespace std;
+
+//polymorphism : ability of an object to take many form.
+
+class student{
+    public:
+    int length;
+    int breadth;
+
+ //function overloading : same function name with different parameters.
+
+    public:
+    int area(int l,int r){
+        return l*r;
+    }
+
+    int area(int r){
+        return r*r;
+    }
+
+};
+
+int main(){
+    student obj;
+    cout<<"Area of rectangle :"<<obj.area(10,5)<<endl;
+    cout<<"Area of square :"<<obj.area(5)<<endl;
+    return 0;
+}
