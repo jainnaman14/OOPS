@@ -1,0 +1,43 @@
+                                                          **CLASS IN CPP
+#include <iostream>
+using namespace std;
+
+class Student{
+public:
+    string name;
+    int roll_no;
+    int age;
+
+
+    void study(){
+        cout<<name<<" is studying"<<endl;
+    }
+};
+
+int main(){
+    Student obj;
+    //dot operator: access methods and properties of a class
+    obj.name ="Naman";
+    obj.age  =22;
+    obj.study();
+}
+
+
+
+                                          **ACCESS MODIFIER
+
+              PUBLIC                         +PRIVATE                        PROTECTED
+
+     -> Anyone can access.            -> No one can access               -> Access via Permission.
+     -> Access outside the class.     -> Access Inside the class.       -> Only Access by their child class.
+
+***By default class uses private class.
+
+
+
+
+
+
+
+
+
