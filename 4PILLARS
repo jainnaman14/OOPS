@@ -86,3 +86,164 @@ int main(){
     cout<<"Area of square :"<<obj.area(5)<<endl;
     return 0;
 }
+
+
+                                     **INHERITANCE
+
+#include<iostream>
+using namespace std;
+
+//INHERITANCE
+
+class human{
+    //properties
+    protected:
+    string name;
+};
+
+class student: public human{
+    int roll_no;
+ 
+    public:
+    student(string n, int a ){
+        name =n;
+        roll_no = a;
+    }
+    void display(){
+        cout<<"Name:"<<name<<endl;
+        cout<<"Roll no : "<<roll_no<<endl;
+
+    }
+};
+
+int main(){
+    student obj("NAMAN",1072);
+    obj.display();
+    return 0;
+}
+
+                                     **MULTILEVELINHERITANCE IN CPP:-
+
+
+#include<iostream>
+using namespace std;    
+
+//Multilevel Inheritance : process by which one class acquires the properties and behaviours of another class which is derived from another class
+
+class Human{
+    protected:
+    string name;
+};
+
+class Person : public Human{
+    protected:
+    int age;
+};
+
+class Student : public Person{
+    
+    int roll_no;
+
+    public:
+    Student(string n,int a,int r){
+        name = n;
+        age = a;
+        roll_no = r;
+    }
+
+void display()
+{
+    cout<<"Name : "<<name<<endl;
+    cout<<"Age : "<<age<<endl;
+    cout<<"Roll No : "<<roll_no<<endl;      
+
+}
+};
+
+int main(){
+    Student obj("Naman",22,1072);
+    obj.display();
+    return 0;
+}
+
+
+                                          **MULTIPLEINHERITANCE IN CPP:-
+
+#include<iostream>
+using namespace std;
+
+//Multiple Inheritance : process by which one class acquires the properties and behaviours of more than one class
+
+class Human{
+    protected:
+    string name;
+};
+
+class Person{
+    protected:
+    int age;
+};  
+
+class Student : public Human, public Person{
+    int roll_no;
+    public:
+    Student(string n,int a,int r){
+        name = n;
+        age = a;
+        roll_no = r;
+    }
+    void display(){
+        cout<<name<<" "<<age<<" "<<roll_no;
+    }
+};
+
+int main(){
+    Student obj("Naman",22,1072); 
+    obj.display();     
+    return 0;
+}
+
+
+                                        **HEIRARCHIALINHERITANCE IN CPP:-
+
+#include<iostream>
+using namespace std;
+
+//Hierarchical Inheritance : process by which one class acquires the properties and behaviours of more than one class
+
+class Human{
+    protected:
+    string name;
+};  
+
+class Student : public Human{
+    int roll_no;
+
+    public:
+    Student(string n , int r){
+        name = n;
+        roll_no = r;
+    }
+};
+
+class People :public Human{
+    int age;
+
+    public:
+    People(string n , int a){
+        name = n;
+        age = a;
+    }
+
+    void display(){
+        cout<<"Name: "<<name<<endl;
+        cout<<"Age : "<<age << endl;
+    }
+
+};
+
+int main (){
+    People obj = People("Naman",22);
+    obj.display();
+}
+
